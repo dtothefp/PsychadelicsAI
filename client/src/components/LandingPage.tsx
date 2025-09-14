@@ -32,7 +32,7 @@ export default function LandingPage() {
               </div>
               
               {/* Email capture form */}
-              <div className="pt-8">
+              <div className="pt-4">
                 <EmailCaptureForm onEmailSubmitted={handleEmailSubmitted} />
               </div>
               

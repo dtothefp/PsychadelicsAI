@@ -79,7 +79,7 @@ export default function EmailCaptureForm({ onEmailSubmitted }: EmailCaptureFormP
           </div>
         ) : (
           <div className="flex items-center gap-2">
-            <span>Join Now</span>
+            <span>Start your journey</span>
             <span className="text-lg">→</span>
           </div>
         )}
