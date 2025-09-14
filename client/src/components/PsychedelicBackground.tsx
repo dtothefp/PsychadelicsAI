@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import psychedelicBg from '@assets/generated_images/Psychedelic_neural_network_background_217553c2.png';
+import sophisticatedBg from '@assets/thumb-2020x1400_1757871540997.jpg';
 
 export default function PsychedelicBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -40,14 +40,14 @@ export default function PsychedelicBackground() {
         Math.max(canvas.width, canvas.height) * 0.8
       );
       
-      // Psychedelic colors that shift over time
-      const hue1 = (280 + Math.sin(time) * 30) % 360;
-      const hue2 = (180 + Math.cos(time * 0.8) * 40) % 360;
-      const hue3 = (240 + Math.sin(time * 1.2) * 20) % 360;
+      // Sophisticated colors that shift over time - turquoise, golden, coral
+      const hue1 = (180 + Math.sin(time) * 20) % 360; // Turquoise/cyan base
+      const hue2 = (45 + Math.cos(time * 0.8) * 15) % 360; // Golden yellow
+      const hue3 = (25 + Math.sin(time * 1.2) * 10) % 360; // Coral orange
       
-      gradient.addColorStop(0, `hsla(${hue1}, 85%, 65%, 0.8)`);
-      gradient.addColorStop(0.4, `hsla(${hue2}, 70%, 55%, 0.6)`);
-      gradient.addColorStop(0.7, `hsla(${hue3}, 80%, 50%, 0.4)`);
+      gradient.addColorStop(0, `hsla(${hue1}, 75%, 60%, 0.7)`);
+      gradient.addColorStop(0.4, `hsla(${hue2}, 85%, 65%, 0.5)`);
+      gradient.addColorStop(0.7, `hsla(${hue3}, 85%, 65%, 0.4)`);
       gradient.addColorStop(1, 'hsla(220, 15%, 8%, 0.9)');
       
       ctx.fillStyle = gradient;
@@ -61,7 +61,7 @@ export default function PsychedelicBackground() {
         const radius = 50 + Math.sin(time + i) * 30;
         
         const circleGradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-        circleGradient.addColorStop(0, `hsla(${(hue1 + i * 30) % 360}, 85%, 70%, 0.3)`);
+        circleGradient.addColorStop(0, `hsla(${(hue1 + i * 15) % 360}, 75%, 60%, 0.3)`);
         circleGradient.addColorStop(1, 'transparent');
         
         ctx.fillStyle = circleGradient;
@@ -87,8 +87,8 @@ export default function PsychedelicBackground() {
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Static background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
-        style={{ backgroundImage: `url(${psychedelicBg})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
+        style={{ backgroundImage: `url(${sophisticatedBg})` }}
       />
       
       {/* Animated canvas overlay */}
