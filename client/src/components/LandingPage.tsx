@@ -42,13 +42,13 @@ export default function LandingPage() {
               {/* Thank you state */}
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <p className="text-xl md:text-2xl text-white/90 font-light">
+                  <h1 className="text-4xl md:text-6xl font-light text-white tracking-tight leading-tight drop-shadow-lg">
                     Thank you for joining.
-                  </p>
+                  </h1>
                 </div>
                 
                 <div className="pt-4">
-                  <p className="text-base text-white/80 font-light drop-shadow-sm">
+                  <p className="text-xl md:text-2xl text-white/80 font-light drop-shadow-sm">
                     The path forward will be revealed to those who seek.
                   </p>
                 </div>
