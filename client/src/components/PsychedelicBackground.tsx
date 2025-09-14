@@ -10,7 +10,7 @@ export default function PsychedelicBackground() {
       />
       
       {/* Subtle overlay for text readability */}
-      <div className="absolute inset-0 bg-background/20" />
+      <div className="absolute inset-0 bg-black/40" />
     </div>
   );
 }

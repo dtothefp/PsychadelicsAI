@@ -23,12 +23,10 @@ export default function LandingPage() {
             <div className="space-y-8 animate-fade-in">
               {/* Mysterious headline */}
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl font-light text-foreground tracking-tight leading-tight">
-                  <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Psychedelics.ai
-                  </span>
+                <h1 className="text-5xl md:text-7xl font-light text-white tracking-tight leading-tight drop-shadow-lg">
+                  Psychedelics.ai
                 </h1>
-                <p className="text-xl md:text-2xl text-foreground/80 font-light tracking-wide">
+                <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-md">
                   Where consciousness meets code
                 </p>
               </div>
@@ -39,7 +37,7 @@ export default function LandingPage() {
               </div>
               
               {/* Subtle hint */}
-              <p className="text-sm text-foreground/50 font-light tracking-widest uppercase">
+              <p className="text-sm text-white/70 font-light tracking-widest uppercase drop-shadow-sm">
                 Discover what lies beyond
               </p>
             </div>
@@ -48,27 +46,25 @@ export default function LandingPage() {
               {/* Thank you state */}
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h1 className="text-4xl md:text-6xl font-light text-foreground tracking-tight leading-tight">
-                    <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                      Welcome to your journey
-                    </span>
+                  <h1 className="text-4xl md:text-6xl font-light text-white tracking-tight leading-tight drop-shadow-lg">
+                    Welcome to your journey
                   </h1>
-                  <p className="text-xl md:text-2xl text-foreground/80 font-light">
+                  <p className="text-xl md:text-2xl text-white/90 font-light">
                     Thank you for joining.
                   </p>
                 </div>
                 
                 <div className="pt-4">
-                  <p className="text-base text-foreground/60 font-light">
+                  <p className="text-base text-white/80 font-light drop-shadow-sm">
                     The path forward will be revealed to those who seek.
                   </p>
                 </div>
                 
                 {/* Email confirmation */}
                 <div className="pt-2">
-                  <p className="text-sm text-foreground/40 font-light tracking-wide">
+                  <p className="text-sm text-white/70 font-light tracking-wide drop-shadow-sm">
                     We'll reach you at{' '}
-                    <span className="text-primary font-medium">
+                    <span className="text-white font-medium">
                       {submittedEmail}
                     </span>
                   </p>
