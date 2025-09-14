@@ -15,10 +15,8 @@ export default function EmailCaptureForm({ onEmailSubmitted }: EmailCaptureFormP
 
   const subscriptionMutation = useMutation({
     mutationFn: async (email: string) => {
-      return await apiRequest('/api/subscribe', {
-        method: 'POST',
-        body: { email }
-      });
+      const response = await apiRequest('POST', '/api/subscribe', { email });
+      return await response.json();
     },
     onSuccess: (data) => {
       onEmailSubmitted(email);
