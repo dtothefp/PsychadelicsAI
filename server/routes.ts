@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertEmailSubscriberSchema } from "@shared/schema";
+import { addContactToBrevo } from "./brevo";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Email subscription endpoint
@@ -18,17 +19,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const { email } = result.data;
 
-      // Check if email already exists
-      const existingSubscriber = await storage.getEmailSubscriberByEmail(email);
-      if (existingSubscriber) {
-        return res.json({ 
-          success: true, 
-          message: "Email already subscribed" 
+      // Add contact to Brevo
+      const brevoSuccess = await addContactToBrevo(email);
+      
+      if (!brevoSuccess) {
+        return res.status(500).json({ 
+          success: false, 
+          error: "Failed to add email to contact list" 
         });
       }
 
-      // Store the email subscription
-      await storage.createEmailSubscriber({ email });
+      // Also store locally for backup/reference
+      const existingSubscriber = await storage.getEmailSubscriberByEmail(email);
+      if (!existingSubscriber) {
+        await storage.createEmailSubscriber({ email });
+      }
 
       res.json({ 
         success: true, 
