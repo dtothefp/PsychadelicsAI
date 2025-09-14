@@ -56,7 +56,7 @@ export default function EmailCaptureForm({ onEmailSubmitted }: EmailCaptureFormP
       <div className="relative">
         <Input
           type="email"
-          placeholder="Enter your email"
+          placeholder="Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="h-12 bg-background/10 backdrop-blur border-primary/30 text-foreground placeholder:text-foreground/60 focus:border-primary focus:ring-primary/20 transition-all duration-300"
@@ -75,10 +75,13 @@ export default function EmailCaptureForm({ onEmailSubmitted }: EmailCaptureFormP
         {isSubmitting ? (
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 border-2 border-primary-foreground/20 border-t-primary-foreground rounded-full animate-spin" />
-            Entering...
+            Joining...
           </div>
         ) : (
-          'Enter the journey'
+          <div className="flex items-center gap-2">
+            <span>Join Now</span>
+            <span className="text-lg">→</span>
+          </div>
         )}
       </Button>
     </form>
