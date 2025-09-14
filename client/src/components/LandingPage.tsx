@@ -47,7 +47,7 @@ export default function LandingPage() {
                   </h1>
                 </div>
                 
-                <div className="pt-2">
+                <div>
                   <p className="text-xl md:text-2xl text-white/80 font-light drop-shadow-sm">
                     The path forward reveals itself through exploration.
                   </p>
