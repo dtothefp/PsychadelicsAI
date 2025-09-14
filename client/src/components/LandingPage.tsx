@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PsychedelicBackground from './PsychedelicBackground';
 import EmailCaptureForm from './EmailCaptureForm';
 
@@ -6,9 +6,20 @@ export default function LandingPage() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState('');
 
+  // Check localStorage on component mount
+  useEffect(() => {
+    const storedEmail = localStorage.getItem('psychedelics-ai-email');
+    if (storedEmail) {
+      setSubmittedEmail(storedEmail);
+      setEmailSubmitted(true);
+    }
+  }, []);
+
   const handleEmailSubmitted = (email: string) => {
     setSubmittedEmail(email);
     setEmailSubmitted(true);
+    // Store in localStorage so user doesn't see form again
+    localStorage.setItem('psychedelics-ai-email', email);
   };
 
   return (
