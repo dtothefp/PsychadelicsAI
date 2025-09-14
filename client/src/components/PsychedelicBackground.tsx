@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import sophisticatedBg from '@assets/thumb-2020x1400_1757871540997.jpg';
+import psychedelicBg from '@assets/generated_images/Psychedelic_neural_network_background_217553c2.png';
 
 export default function PsychedelicBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -87,8 +87,8 @@ export default function PsychedelicBackground() {
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Static background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
-        style={{ backgroundImage: `url(${sophisticatedBg})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
+        style={{ backgroundImage: `url(${psychedelicBg})` }}
       />
       
       {/* Animated canvas overlay */}
