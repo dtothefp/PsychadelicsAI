@@ -42,9 +42,6 @@ export default function LandingPage() {
               {/* Thank you state */}
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h1 className="text-4xl md:text-6xl font-light text-white tracking-tight leading-tight drop-shadow-lg">
-                    Welcome to your journey
-                  </h1>
                   <p className="text-xl md:text-2xl text-white/90 font-light">
                     Thank you for joining.
                   </p>
