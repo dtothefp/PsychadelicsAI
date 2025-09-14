@@ -68,7 +68,7 @@ export default function EmailCaptureForm({ onEmailSubmitted }: EmailCaptureFormP
       
       <Button
         type="submit"
-        className="w-full h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground font-medium text-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+        className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
         disabled={isSubmitting}
         data-testid="button-submit"
       >
