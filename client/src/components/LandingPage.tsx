@@ -36,10 +36,6 @@ export default function LandingPage() {
                 <EmailCaptureForm onEmailSubmitted={handleEmailSubmitted} />
               </div>
               
-              {/* Subtle hint */}
-              <p className="text-sm text-white/70 font-light tracking-widest uppercase drop-shadow-sm">
-                Discover what lies beyond
-              </p>
             </div>
           ) : (
             <div className="space-y-8 animate-fade-in">

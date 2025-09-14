@@ -50,6 +50,11 @@
   --chart-5: 15 80% 60%;
 
   --font-sans: 'Space Grotesk', 'Inter', sans-serif;
+  --font-alt-1: 'Inter', 'Space Grotesk', sans-serif;
+  --font-alt-2: 'Outfit', 'Inter', sans-serif;
+  --font-alt-3: 'Playfair Display', 'Georgia', serif;
+  --font-alt-4: 'Montserrat', 'Inter', sans-serif;
+  --font-alt-5: 'Crimson Text', 'Georgia', serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem; /* 8px */
